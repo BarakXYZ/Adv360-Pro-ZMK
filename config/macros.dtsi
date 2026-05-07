@@ -222,3 +222,21 @@
     bindings = <&mkp MB1 &mkp MB1>;
     display-name = "Double Click";
   };
+
+  profile_1_handoff: profile_1_handoff {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <50>;
+    tap-ms = <50>;
+    bindings = <&kp F20>, <&macro_wait_time 700>, <&bt BT_SEL 0>;
+    display-name = "Profile 1 Handoff";
+  };
+
+  profile_3_handoff: profile_3_handoff {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <50>;
+    tap-ms = <50>;
+    bindings = <&kp F21>, <&macro_wait_time 700>, <&bt BT_SEL 2>;
+    display-name = "Profile 3 Handoff";
+  };
