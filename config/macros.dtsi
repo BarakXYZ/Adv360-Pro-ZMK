@@ -228,7 +228,8 @@
     #binding-cells = <0>;
     wait-ms = <50>;
     tap-ms = <50>;
-    bindings = <&kp F20>, <&macro_wait_time 700>, <&bt BT_SEL 0>;
+    // Wait after releasing the host command, before Bluetooth changes (50 + 700 ms).
+    bindings = <&macro_wait_time 700>, <&kp F20>, <&macro_wait_time 0>, <&bt BT_SEL 0>;
     display-name = "Profile 1 Handoff";
   };
 
@@ -237,6 +238,7 @@
     #binding-cells = <0>;
     wait-ms = <50>;
     tap-ms = <50>;
-    bindings = <&kp F21>, <&macro_wait_time 700>, <&bt BT_SEL 2>;
+    // Wait after releasing the host command, before Bluetooth changes (50 + 700 ms).
+    bindings = <&macro_wait_time 700>, <&kp F21>, <&macro_wait_time 0>, <&bt BT_SEL 2>;
     display-name = "Profile 3 Handoff";
   };
